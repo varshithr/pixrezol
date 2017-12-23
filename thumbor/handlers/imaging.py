@@ -42,7 +42,8 @@ class ImagingHandler(ContextHandler):
         kw['request'] = self.request
         self.context.request = RequestParameters(**kw)
 
-        has_none = not self.context.request.unsafe and not self.context.request.hash
+        # has_none = not self.context.request.unsafe and not self.context.request.hash
+        has_none = False
         has_both = self.context.request.unsafe and self.context.request.hash
 
         if has_none or has_both:

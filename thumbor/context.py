@@ -137,7 +137,7 @@ class RequestParameters:
                  extension=None,
                  buffer=None,
                  focal_points=None,
-                 unsafe=False,
+                 unsafe=True,
                  hash=None,
                  accepts_webp=False,
                  request=None,
@@ -193,9 +193,10 @@ class RequestParameters:
             focal_points = []
 
         self.focal_points = focal_points
-        self.hash = hash
+        self.hash = None
         self.prevent_result_storage = False
-        self.unsafe = unsafe == 'unsafe' or unsafe is True
+        # self.unsafe = unsafe == 'unsafe' or unsafe is True
+        self.unsafe = True
         self.format = None
         self.accepts_webp = accepts_webp
         self.max_bytes = None
