@@ -1,7 +1,7 @@
 *.pyc
 .DS_Store
 *.swp
-dist/
+#dist/
 *.egg-info
 .project
 .pydevprojectthumbor/tests/visual_test/img
